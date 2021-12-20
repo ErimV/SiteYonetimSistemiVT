@@ -92,7 +92,7 @@ public class IltBilg extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    String sql = String.format("DELETE FROM public.iletisim_bilgileri WHERE turkodu='%s'",field1.getText());
+                    String sql = String.format("DELETE FROM public.iletisim_bilgileri WHERE turkodu='%s'",field2.getText());
                     Statement st = conn.createStatement();
                     st.executeUpdate(sql);
                     model = IltBilg.reloadTable(mainPanel,conn);
